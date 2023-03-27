@@ -126,3 +126,75 @@ ask(
     () => alert("Вы согласились."),
     () => alert("Вы отменили выполнение.")
 );
+
+//-----------------------------------------------
+
+
+let user = {};
+user.name = 'John';
+user.surname = 'Smith';
+user.name = 'Pith';
+delete user.name;
+
+//-----------------------------------------------
+
+
+function isEmpty(obj) {
+    for (let key in obj) {
+        // если тело цикла начнет выполняться - значит в объекте есть свойства
+        return false;
+    }
+    return true;
+}
+
+let schedule = {};
+
+alert(isEmpty(schedule)); // true
+
+schedule["8:30"] = "get up";
+
+alert(isEmpty(schedule)); // false
+
+//-----------------------------------------------
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+
+let summ = 0;
+for (let key in salaries) {
+    summ += salaries[key];
+};
+console.log(summ);
+
+//-----------------------------------------------
+
+// до вызова функции
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+
+// после вызова функции
+// menu = {
+//     width: 400,
+//     height: 600,
+//     title: "My menu"
+// };
+
+function multiplyNumeric(m) {
+    for (let key in m) {
+        if (typeof m[key] === 'number') {
+            m[key] *= 2;
+        }
+    }
+}
+
+multiplyNumeric(menu);
+console.log(menu);
+
+//-----------------------------------------------
