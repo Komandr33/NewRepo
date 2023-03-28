@@ -198,3 +198,26 @@ multiplyNumeric(menu);
 console.log(menu);
 
 //-----------------------------------------------
+
+let user = {
+    name: 'Andrew',
+    age: 36,
+};
+
+let add = {
+    sity: 'Krasnodar',
+}
+
+let add2 = {
+    country: 'Russia',
+}
+
+Object.assign(user, add, add2); // объединяет объекты
+
+console.log(user);
+
+//-----------------------------------------------
+
+
+
+//-----------------------------------------------
