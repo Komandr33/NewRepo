@@ -52,6 +52,7 @@ const options = {
         border: 'black',
         bg: 'red'
     },
+
     makeTest: function () {      // пример создания метода для объекта
         console.log('test');
     }
@@ -79,3 +80,34 @@ function Animal(name) {
 
 animal = new Animal('baba');
 console.log(animal);
+
+
+let user = { name1: "John", years: 30 };
+
+let { name1, years: age, isAdmin = false } = user; // деструктуризация объекта
+
+alert(name1); // John
+alert(age); // 30
+alert(isAdmin); // false
+
+
+
+
+arr.forEach(function (value, index, arr) {    // метод пребора массива без модиф-ии arr
+    console.log(`${index}: ${value} внутри массива ${arr}`)
+})
+
+
+let arr = [2, 3, 1, 5, 7, 10];
+
+function LinearSearch(index, myArr) {
+    let result = -1
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i] == index) {
+            result = i
+        }
+    }
+    return result;
+}
+console.log(LinearSearch(41, arr));
+
