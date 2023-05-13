@@ -111,3 +111,104 @@ function LinearSearch(index, myArr) {
 }
 console.log(LinearSearch(41, arr));
 
+
+
+const contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unknown",
+        likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+];
+
+function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+            if (prop in contacts[i]) {
+                return contacts[i][prop];
+            } else return 'No such property';
+        }
+    }
+    return 'No such contact';
+}
+console.log(lookUpProfile("Harry", "likes"));
+
+
+const rps = (p1, p2) => {
+    if (p1 !== p2) {
+        if ((p1 == "scissors" && p2 == "paper")
+            || (p1 == "paper" && p2 == "rock")
+            || (p1 == "rock" && p2 == "scissors")) {
+            return "Player 1 won!";
+        } else return "Player 2 won!";
+    } else return "Draw!";
+};
+
+function century(year) {
+    return Math.ceil(year / 100);
+}
+
+
+
+
+function findNeedle(haystack) {
+    return `found the needle at position ${haystack.indexOf("needle", 0)}`;
+}
+
+function positiveSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            sum += arr[i];
+        } else continue;
+    }
+    return sum;
+}
+
+console.log(positiveSum([1, 2, -3, 5]));
+
+function positiveSum(arr) {
+    return arr.reduce((a, b) => a + (b > 0 ? b : 0), 10);
+}
+
+const repeatStr = (n, s) => s.repeat(n);
+
+function createCounter() {
+    counter = 0;
+
+    const myFunction = function () {
+        counter += 1;
+        return counter;
+    }
+
+    return myFunction;
+}
+
+//-----------------------------------------------------
+
+let y = [1, 2, 3];
+let x = [1, 2, 3];
+// console.log(x);
+console.log(!!(0 && 2));
+
+
+
