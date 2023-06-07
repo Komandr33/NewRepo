@@ -212,3 +212,12 @@ console.log(!!(0 && 2));
 
 
 
+let str = 'Aladdin Asaassin Baaarguzin Piramida'
+const reg = /a+/gi;
+
+console.log(str.match(reg));
+
+let quoteSample = "3 blind mice.";
+let myRegex = /[^0-9aeiou]/gi; // '^' указывает на отрицание. Т.е. указывает на символы которые не нужно сопоставлять
+let result = quoteSample.match(myRegex);
+console.log(result);
