@@ -69,7 +69,7 @@ for (let key in options) {
     }
 }
 
-Object.keys(options) // возвращает все ключи объекта в виде массива строк
+console.log(Object.keys(options))  // возвращает все ключи объекта в виде массива строк
 
 //--------------------------------------------------------------
 
@@ -221,3 +221,151 @@ let quoteSample = "3 blind mice.";
 let myRegex = /[^0-9aeiou]/gi; // '^' указывает на отрицание. Т.е. указывает на символы которые не нужно сопоставлять
 let result = quoteSample.match(myRegex);
 console.log(result);
+
+
+const isLeapYear = (year) => (year % 400 === 0 || year % 4 === 0 & year % 100 !== 0) ? true : false
+
+console.log(isLeapYear(2020));
+
+
+function findNextSquare(sq) {
+    const s = Math.sqrt(sq);
+    return s % s === 0 ? (s + 1) * (s + 1) : -1
+}
+
+console.log(findNextSquare(122));
+
+
+const users = {
+    myFriends: [
+        { id: 1, name: 'John', age: 25, address: { street: '123 Main St', city: 'New York' } },
+        { id: 2, name: 'Alice', age: 30, address: { street: '456 Elm St', city: 'San Francisco' } },
+        { id: 3, name: 'Bob', age: 35, address: { street: '789 Oak St', city: 'Seattle' } },
+        { id: 4, name: 'John', age: 44, address: { street: '123 Maple Ave', city: 'Dallas' } },
+        { id: 5, name: 'Mary', age: 13, address: { street: '456 Elm St', city: 'Los Angeles' } },
+        { id: 6, name: 'James', age: 18, address: { street: '987 Pine Rd', city: 'Dallas' } },
+        { id: 7, name: 'Jennifer', age: 21, address: { street: '654 Birch Ct', city: 'Seattle' } },
+        { id: 8, name: 'Robert', age: 4, address: { street: '876 Spruce Way', city: 'San Francisco' } },
+        { id: 9, name: 'Jessica', age: 12, address: { street: '543 Willow Dr', city: 'San Francisco' } },
+        { id: 10, name: 'Emily', age: 55, address: { street: '765 Aspen Blvd', city: 'Los Angeles' } },
+    ]
+}
+
+//   let [currentUsers, setCurrentUsers] = useState<UsersObjectType>(users);
+
+const filterUsers = () => {
+    const filteredUsers = users.myFriends.filter(u => u.address.city == 'Los Angeles');
+    return filteredUsers
+    // setCurrentUsers({ myFriends: filteredUsers });
+};
+
+console.log(filterUsers())
+
+
+
+    < input id = "client" value = "it-incubator" />
+
+        <script>
+            const searchInputElement = document.querySelector(XXX);
+            searchInputElement.value = '';
+
+        /* 
+        Что нужно написать внутри скобок вместо XXX, чтобы значение в поле ввода зачищалось?
+        */
+        </script>
+
+
+<script>
+    function removeWhitespaces(string) {
+         string.split(' ').filter(s => s !== '').join('_')
+    }
+
+    console.log(removeWhitespaces('you are JS developer'))
+</script>
+
+
+Чему равно значение св - ва name объекта user ?
+
+    <script>
+        let user = {
+            name: 'samurai',
+        age: 18
+    }
+
+        let user2 = user;
+
+        user2.name = 'ninja';
+    </script>
+
+
+<input id="search"/>
+<button id="find">find</button>
+
+<script>
+    const searchInputElement = document.getElementById('search')
+    const lookButtonElement = document.getElementById('find')
+
+    XXX.addEventListener(YYY, () => {
+        console.log(searchInputElement.value)
+    })
+
+/*
+Что нужно написать внутри скобок вместо XXX и YYY, чтобы при нажатии на кнопку увидеть текст, введённый в input?
+Ответ дайте через пробел.
+Пример ответа: firstword secondword
+*/
+
+</script>
+
+
+let user = { age: 0 };
+for (let i = 0; i < 10; i++) {
+    user.age = i;
+}
+
+
+<input id="uzbekistan" value="it-incubator"/>
+
+<script>
+    const inputElement = document.getElementById('uzbekistan');
+    inputElement.value = '';
+
+   /* Что нужно написать вместо XXX, чтобы значение в поле ввода зачищалось?
+❗В качестве ответа укажите строчку целиком.  */
+</script>
+
+
+
+===========================
+
+<input id="client" value="it-incubator"/>
+
+<script>
+    const searchInputElement = document.querySelector(XXX);
+    searchInputElement.value = '';
+
+/*
+Что нужно написать внутри скобок вместо XXX, чтобы значение в поле ввода зачищалось?
+*/
+</script>
+
+============================
+<input id="search"/>
+<button id="find">find</button>
+
+<script>
+    const searchInputElement = document.getElementById('search')
+    const lookButtonElement = document.getElementById('find')
+
+    XXX.addEventListener(YYY, () => {
+        console.log(searchInputElement.value)
+    })
+
+/*
+Что нужно написать внутри скобок вместо XXX и YYY, чтобы при нажатии на кнопку увидеть текст, введённый в input?
+Ответ дайте через пробел.
+Пример ответа: firstword secondword
+*/
+
+</script>
+

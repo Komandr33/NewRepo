@@ -16,9 +16,9 @@ function random(min, max) {                     // возвращает ранд
     return min + Math.random() * (max - min);
 }
 
-alert(random(1, 5));
-alert(random(1, 5));
-alert(random(1, 5));
+console.log(random(1, 5));
+console.log(random(1, 5));
+console.log(random(1, 5));
 
 //-----------------------------------------------
 
@@ -27,9 +27,9 @@ function random(min, max) {                         // возвращает ра
     return Math.floor(a);
 }
 
-alert(random(1, 5));
-alert(random(1, 5));
-alert(random(1, 5));
+console.log(random(1, 5));
+console.log(random(1, 5));
+console.log(random(1, 5));
 
 //-----------------------------------------------
 
@@ -74,9 +74,9 @@ if (number === 2 || number === 3) {
     alert('Вы ввели число 2, а может и 3');
 }  // ->->->->
 
-const number = +prompt('Введите число между 0 и 3', '');
+const num = +prompt('Введите число между 0 и 3', '');
 
-switch (number) {
+switch (num) {
     case 0:
         alert('Вы ввели число 0');
         break;
@@ -261,7 +261,7 @@ alert(calculator.mul());
 
 //-----------------------------------------------
 
-let num = 1e4; // вернёт 10000 т.к. 'е' умножает на 1 с кол-вом нулей указанным после 'e'
+let num11 = 1e4; // вернёт 10000 т.к. 'е' умножает на 1 с кол-вом нулей указанным после 'e'
 let m = 1e-3;  // вернёт 0.001 т.к. 'е' делит на 1 с кол-вом нулей указанным после 'e', если оно отрицательное
 //-----------------------------------------------
 
